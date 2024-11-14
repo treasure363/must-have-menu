@@ -3,22 +3,31 @@ import './MarqueeSlider.css'; // Import the CSS file for styling
 
 const Slider = () => {
   const images = [
-    'https://via.placeholder.com/150x100/FF0000/FFFFFF?text=Image+1',
-    'https://via.placeholder.com/150x100/00FF00/FFFFFF?text=Image+2',
-    'https://via.placeholder.com/150x100/0000FF/FFFFFF?text=Image+3',
-    'https://via.placeholder.com/150x100/FFFF00/FFFFFF?text=Image+4',
-    'https://via.placeholder.com/150x100/FF00FF/FFFFFF?text=Image+5',
-    'https://via.placeholder.com/150x100/00FFFF/FFFFFF?text=Image+6',
-  ];
+    "https://timber.mhmcdn.com/site/marketing/homepage/1_SimpleGridBurgerDMB.webp",
+    "https://timber.mhmcdn.com/site/marketing/homepage/2_DarkBarDMB.webp",
+    "https://timber.mhmcdn.com/site/marketing/homepage/3_DynamicDIYMexicanDMB.webp",
+    "https://timber.mhmcdn.com/site/marketing/homepage/4_CupofCoffeeDMB.webp",
+    "https://timber.mhmcdn.com/site/marketing/homepage/5_CupcakeDMB.webp",
+    "https://timber.mhmcdn.com/site/marketing/homepage/1_SimpleGridBurgerDMB.webp",
+    "https://timber.mhmcdn.com/site/marketing/homepage/2_DarkBarDMB.webp",
+    "https://timber.mhmcdn.com/site/marketing/homepage/3_DynamicDIYMexicanDMB.webp",
+    "https://timber.mhmcdn.com/site/marketing/homepage/4_CupofCoffeeDMB.webp",
+    "https://timber.mhmcdn.com/site/marketing/homepage/5_CupcakeDMB.webp"
+  ];  
 
   return (
-    <div className="marquee-container">
-      <div className="marquee-content">
-        {/* Display images twice to ensure a seamless loop */}
-        {[...images, ...images].map((src, index) => (
-          <img src={src} alt={`Slide ${index + 1}`} className="marquee-image" key={index} />
-        ))}
+    <div>
+      <div className="marquee-container">
+        <div className="fade-left"></div>
+        <div className="fade-right"></div>
+        <div className="marquee-content">
+          {/* Duplicate images to ensure seamless looping */}
+          {[...images, ...images].map((src, index) => (
+            <img src={src} alt={`Slide ${index + 1}`} className="marquee-image" key={index} />
+          ))}
+        </div>
       </div>
+
     </div>
   );
 };
