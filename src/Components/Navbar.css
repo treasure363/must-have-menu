@@ -1,0 +1,213 @@
+/* Navbar base styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  font-family: Arial, sans-serif;
+}
+
+/* Left section */
+.navbar-left, .navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.logo-bold {
+  color: #ff0800;
+}
+
+/* Navigation links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  position: relative;
+  margin: 0 15px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Right section with search and buttons */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Search bar styling */
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.search-bar {
+  padding: 8px 16px 8px 40px; /* Added left padding for icon */
+  border-radius: 20px;
+  border: 1px solid lightgray;
+  width: 300px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: #ff0800; /* Matches your theme color */
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  width: 20px;
+  height: 20px;
+  color: #9ca3af;
+  pointer-events: none; /* Ensures icon doesn't interfere with input */
+}
+
+/* Button styles */
+.demo-button, .login-button {
+  background-color: #ff0800;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  transition: background-color 0.2s ease;
+}
+
+.demo-button:hover, .login-button:hover {
+  background-color: #e60700;
+}
+
+/* Dropdown styles */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  padding: 20px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  width: max-content;
+}
+
+/* Templates dropdown */
+.templates-dropdown {
+  margin-top: 20px;
+  width: 800px;
+}
+
+.templates-content p {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.templates-content p:hover {
+  color: #d9534f;
+}
+
+/* Digital dropdown */
+.digital-dropdown {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  width: 600px;
+}
+
+.digital-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.digital-section {
+  width: 90px;
+  text-align: center;
+}
+
+.digital-section img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.digital-section p {
+  font-size: 14px;
+  margin: 0;
+  color: #333;
+}
+
+.digital-section:hover img {
+  transform: scale(1.05);
+}
+
+/* Pricing dropdown */
+.pricing-dropdown {
+  width: 200px;
+}
+
+.pricing-content p {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.pricing-content p:hover {
+  color: #dd625e;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .navbar-left, .navbar-right {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dropdown {
+    width: 100%;
+  }
+
+  .search-wrapper {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+
+  .demo-button, .login-button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}

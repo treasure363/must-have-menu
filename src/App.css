@@ -7,11 +7,17 @@
 
 .main-content {
   flex-grow: 1;
+  min-height: 100vh;
+  position: relative;
+}
+
+.fixed-top {
+  z-index: 1000;
 }
 
 .header-search-bar {
-  border-radius: 20px; /* Optional: makes the input have rounded corners */
-  padding: 10px;       /* Optional: adjusts padding inside the input */
+  border-radius: 20px; 
+  padding: 10px;      
 }
 
 .App-logo {
@@ -53,8 +59,8 @@
 
 .footer {
   background-color: #f8f9fa;
-  padding-top: 60px; /* Adds padding above the footer */
-  padding-bottom: 10px; /* Adds padding below the footer */
+  padding-top: 60px;
+  padding-bottom: 10px;
   text-align: left;
 }
 
