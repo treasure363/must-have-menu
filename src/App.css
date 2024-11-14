@@ -1,5 +1,17 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+}
+
+.header-search-bar {
+  border-radius: 20px; /* Optional: makes the input have rounded corners */
+  padding: 10px;       /* Optional: adjusts padding inside the input */
 }
 
 .App-logo {
@@ -34,5 +46,66 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+
+
+.footer {
+  background-color: #f8f9fa;
+  padding-top: 60px; /* Adds padding above the footer */
+  padding-bottom: 10px; /* Adds padding below the footer */
+  text-align: left;
+}
+
+.footer hr {
+  margin: 0;
+  border-color: #ccc;
+}
+
+.footer h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.footer .discover-links, 
+.footer .resources-links, 
+.footer .company-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.footer a:hover {
+  color: #007bff;
+}
+
+.footer .icons img {
+  width: 30px;
+  margin: 0 10px;
+}
+
+.footer .icons a {
+  margin: 0 10px;
+}
+
+.footer .copyright {
+  font-size: 14px;
+  color: #777;
+}
+
+.footer .text-start {
+  text-align: left !important;
+}
+
+@media (max-width: 768px) {
+  .footer .discover, .footer .resources, .footer .company {
+    margin-bottom: 20px;
   }
 }
